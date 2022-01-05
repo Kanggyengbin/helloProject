@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript/index.html</title>
     <style>
-        #tbl > thead > tr {
+        #tbl>thead>tr {
             background-color: rgb(127, 185, 233);
         }
-        #tbl > tbody > tr:nth-child(2n) {
+
+        #tbl>tbody>tr:nth-child(2n) {
             background-color: yellow;
         }
-        #tbl > tbody > tr:nth-child(2n+1) {
+
+        #tbl>tbody>tr:nth-child(2n+1) {
             background-color: rgb(235, 136, 194);
+        }
+
+        span:not(:empty) {
+            display: inline-block;
+            padding: 3px;
+            border: 1px solid grey;
+            margin: 5px;
+            width: 40px;
+            text-align: center;
+        }
+
+        span:empty {
+            display: inline-block;
+            padding: 3px;
+            margin: 5px 6px;
+            width: 40px;
+        }
+
+        .sunday {
+            background-color: red;
+            color: white;
+        }
+
+        .saturday {
+            background-color: blue;
+            color: white;
         }
     </style>
     <script>
@@ -21,9 +50,16 @@
         document.write('<h3>hello, world</h3>');
         //window.alert('hello, world');
     </script>
-    <script src="control.js"></script>
+    <!-- <script src="calendar.js"></script> -->
 </head>
+
 <body>
-    
+    <div id="show"></div>
+    <script src="string1.js"></script>
+    <script>
+        // document.querySelector('h3').innerHTML = 'Nice, World';
+        // document.querySelector('h3').style.background = 'yellow';
+    </script>
 </body>
+
 </html>
