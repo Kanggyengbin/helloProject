@@ -56,6 +56,30 @@
                     }
                 })
             }
+
+            // 추가버튼 이벤트 등록
+            var addBtn = document.getElementById("addBtn");
+            addBtn.addEventListener("click", addFnc)
+
+            // 사용자 입력 input
+            var input = document.getElementById("inputWord");
+            input.addEventListener("change", chk2)
+
+            function chk2() {
+                var inputText = input.value
+                var addWord = inputText
+            }
+
+            function addFnc() {
+                var wordAry = document.querySelectorAll("span")
+                wordAry.forEach(function (dataAry){
+                    if(input.value == dataAry.innerText) {
+                        dataAry.push()
+                    }
+                })
+            }
+
+            
         })
     </script>
 </head>
@@ -63,6 +87,7 @@
 <body>
     <input type="text" name="inputWord" id="inputWord" />
     <button id="searchBtn">삭제</button>
+    <button id="addBtn">추가</button>
     <br />
     <div id="show"></div>
 </body>
